@@ -1,3 +1,5 @@
+//This runs in N time - linear. It goes through the each of the String's characters once using the for loop. It vaires linearly with the length of the String. 
+
 public class Reverser {
     public static void main (String [] args){
 	String s=args [0];
