@@ -1,0 +1,57 @@
+import java.io.*;
+import java.util.*;
+
+public class LLStack<P> {
+
+    private LinkedList<P> _stack;
+    private int _stackSize;
+
+    //constructor
+    public LLStack() {
+	_stack = new LinkedList<P>();
+	_stackSize = 0;
+    }
+
+
+    //means of insertion
+    public void push(P s){
+	_stack.add(s);
+	_stackSize++;
+    }
+    
+    public P peek() {
+	if (isEmpty()) {
+	    return null;
+	}
+	return _stack.get(_stackSize-1);
+    }
+    
+    //means of removal
+    public P pop( ) {
+	if ( isEmpty() ) return null;
+	return _stack.get(_stackSize---1) ;
+    }
+    
+    public int getSize() {
+	return _stackSize;
+    }
+    
+    //chk for emptiness
+    public boolean isEmpty() {
+	return _stackSize == 0;
+    }
+}
+
+
+
+public class Driver{
+
+    public static void main(String[] Args){
+	LLStack<String> Ben = new LLStack<String>();
+	Ben.push("hello");
+	Ben.push("goodbye");
+	System.out.println(Ben.peek());
+	System.out.println(Ben.pop());
+    }
+
+}
